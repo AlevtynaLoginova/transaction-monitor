@@ -17,7 +17,7 @@ def main():
                 transactions_by_account[account] = []
             transactions_by_account[account].append(timestamp)
 
-            flags = evaluate_transaction(amount, transactions_by_account[account])
+            flags = evaluate_transaction(amount, transactions_by_account[account], country)
             print(f"Account {account}, amount ${amount}: {flags}")
 
 
