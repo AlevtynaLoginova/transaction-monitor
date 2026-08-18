@@ -1,5 +1,6 @@
 import csv
 
+from sanctions import flag_sanctioned_country, flag_high_risk_country
 
 def main():
     transactions_by_account = {}
@@ -10,6 +11,7 @@ def main():
             account = row["account_id"]
             amount = float(row["amount"])
             timestamp = float(row["timestamp"])
+            country = row["country"]
 
             if account not in transactions_by_account:
                 transactions_by_account[account] = []
@@ -41,7 +43,7 @@ def flag_velocity(timestamps, window_minutes=10, max_count=3):
     return "OK"
 
 
-def evaluate_transaction(amount, timestamps):
+def evaluate_transaction(amount, timestamps, country):
     """Run all detection rules on a transaction and return a list of triggered flags."""
     flags = []
 
