@@ -1,3 +1,5 @@
+from sanctions import flag_sanctioned_country, flag_high_risk_country
+
 from monitor import flag_large_transaction, flag_velocity
 
 def test_under_threshold():
