@@ -18,5 +18,5 @@ def test_sanctioned_country ():
     assert flag_sanctioned_country ("Iran") == "FLAGGED: sanctioned country"
 
 def test_high_risk_country ():
-    assert flag_high_risk_country ("Nigeria") == "FLAGGED: high-risk country"
+    assert flag_high_risk_country("Nigeria") == "FLAGGED: high-risk country (score 6)"
 
