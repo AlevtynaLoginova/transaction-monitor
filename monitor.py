@@ -53,7 +53,6 @@ def evaluate_transaction(amount, timestamps, country):
 
     velocity_flag = flag_velocity(timestamps)
     if velocity_flag != "OK":
-            if velocity_flag != "OK":
         flags.append(velocity_flag)
 
     sanctioned_flag = flag_sanctioned_country(country)
