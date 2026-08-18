@@ -14,5 +14,9 @@ def test_over_threshold():
 def test_high_velocity():
     assert flag_velocity([0, 2, 4, 5]) == "FLAGGED: high velocity"
 
+def test_sanctioned_country ():
+    assert flag_sanctioned_country ("Iran") == "FLAGGED: Sanctioned country"
 
+def test_high_risk_country ():
+    asser flag_high_risk_country ("Nigeria") == "FLAGGED: high-risk country"
 
