@@ -43,7 +43,7 @@ def flag_velocity(timestamps, window_minutes=10, max_count=3):
     return "OK"
 
 
-def evaluate_transaction(amount, timestamps, country):
+def evaluate_transaction(amount, timestamps, country):  
     """Run all detection rules on a transaction and return a list of triggered flags."""
     flags = []
 
