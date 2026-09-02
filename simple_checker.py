@@ -1,3 +1,4 @@
+# Practice code
 # 1. Variables — these hold the data for one transaction
 amount = 15000
 country = "Iran"
